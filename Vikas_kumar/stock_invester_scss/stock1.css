@@ -1,0 +1,169 @@
+body {
+  background-color: darkgray;
+}
+
+.outter_block {
+  width: 85%;
+  height: 70%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  border-radius: 5%;
+  background-color: white;
+}
+
+.outter_parent_block {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+}
+
+.first_half_block {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+}
+
+.text {
+  font-size: 14px;
+  font-weight: bolder;
+  position: absolute;
+  display: block;
+  top: 31%;
+  left: 20%;
+  cursor: pointer;
+}
+
+.text input {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.text:hover input ~ .checkmark {
+  background-color: lightgreen;
+  cursor: pointer;
+}
+
+.text input:checked ~ .checkmark {
+  background-color: darkblue;
+}
+
+h3 {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  top: 10%;
+  left: 20%;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-shadow: darkgray 1px 1px 1px 1px;
+  box-shadow: darkgray 1px 1px 1px 1px;
+  position: absolute;
+  top: 69%;
+  left: 32%;
+  opacity: 0.75;
+  color: white;
+  font-size: 14px;
+  background-color: black;
+  width: 37%;
+  height: 11%;
+}
+
+.button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.text1 {
+  font-size: 13px;
+  font-weight: bolder;
+  position: absolute;
+  display: block;
+  top: 48%;
+  left: 20%;
+  cursor: pointer;
+}
+
+.text1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.text1:hover input~ .checkmark {
+  background-color: lightgreen;
+  cursor: pointer;
+}
+
+.text1 input:checked ~ .checkmark {
+  background-color: darkblue;
+}
+
+.checkmark {
+  position: absolute;
+  top: 5%;
+  left: -7%;
+  height: 25px;
+  width: 25px;
+  background-color: lightslategray;
+}
+.second_half_block{
+    position: relative;
+    width:50%;
+    height: 100%;
+    display: inline-block;
+}
+.circle_block{
+    position: absolute;
+    top: 16%;
+    left: 16%;
+    border-radius: 50%;
+    background-color: lightskyblue;
+    width: 55%;
+    height: 62%;
+    z-index: 2;
+}
+.image{
+    width: 64%;
+    height: 40%;
+    position: absolute;
+    top: 27%;
+    left: 31%;
+    background-image: url('2.jpg');
+    z-index: 3;
+}
+@media only screen and (max-width:1109px){
+    .outter_block{
+        width:50%;
+        height:100%;
+    } 
+    .first_half_block{
+        width:100%;
+        height: 50%;
+    } 
+    .second_half_block{
+        width: 100%;
+        height: 50%;
+    }
+      .outter_parent_block {
+        display: block;
+      }
+}
+/*# sourceMappingURL=stock1.css.map */

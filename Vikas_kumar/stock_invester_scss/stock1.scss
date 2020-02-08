@@ -1,0 +1,119 @@
+$button_color: black;
+$circle_color:rgb(191, 225, 236);
+body{
+    background-color: darkgray;
+}
+// @mixin type {
+//     font-size: 10px;
+//     position: absolute;
+// }
+@mixin label{
+    font-size: 20px;
+    font-weight: bolder;
+    position: absolute;
+}
+.outter_block{
+    width:85%;
+    height: 70%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    border-radius: 5%;
+    background-color: white;
+}
+.outter_parent_block{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.first_half_block{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+.text{
+    @include label();
+    display: block;
+    top: 30%;
+    left:12%;
+    cursor: pointer;
+}
+.text input{
+    position: absolute;
+    cursor: pointer;
+    opacity:0;
+    height: 0;
+    width: 0;
+}
+.text:hover input~.checkmark{
+    background-color: lightgreen;
+    cursor: pointer;
+}
+.text input:checked ~ .checkmark{
+    background-color: darkblue;
+}
+h3{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    top: 10%;
+    left: 20%;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: darkgray 1px 1px 1px 1px;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    opacity:0.75;
+    color: white;
+    font-size: 30px;
+    background-color: $button_color;
+    width:30%;
+    height: 20%;
+}
+.button:hover{
+opacity: 1;
+cursor: pointer;
+}
+.text1{
+    @include label();
+    display: block;
+    top: 40%;
+    left:20%;
+    cursor: pointer;
+}
+.text1 input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.text1:hover ~ .checkmark{
+    background-color: lightgreen;
+    cursor: pointer;
+}
+.text1 input:checked ~ .checkmark{
+    background-color: darkblue;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: lightslategray;
+  }
+//   .type{
+//       @include type();
+//       top: 20%;
+//       left:30%;
+//   }
+//   .type1{
+//       @include type();
+//       top: 50%;
+//       left:30%;
+//   }
